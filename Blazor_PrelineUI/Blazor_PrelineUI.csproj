@@ -15,10 +15,5 @@
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
-
-	<Target Name="PrePublishFrontend" BeforeTargets="Publish">
-		<Exec WorkingDirectory="$(ProjectDir)ClientApp" Command="npm install" />
-		<Exec WorkingDirectory="$(ProjectDir)ClientApp" Command="npm run build" />
-	</Target>
 	
 </Project>
