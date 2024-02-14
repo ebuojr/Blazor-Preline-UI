@@ -1,0 +1,12 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+
+@Body
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Invoke Preline UI
+        await JSRuntime.InvokeVoidAsync("window.HSStaticMethods.autoInit");
+    }
+}
