@@ -15,5 +15,9 @@
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
+
+	<Target Name="NpmRunBuild" BeforeTargets="BeforeBuild">
+		<Exec Command="npm run build" />
+	</Target>
 	
 </Project>
